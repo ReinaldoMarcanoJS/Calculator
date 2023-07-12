@@ -9,7 +9,7 @@ import { Ptoggle } from "./ui/Ptoggle";
 import { SectionToggle } from "./ui/SectionToggle";
 import { InputView } from "./ui/InputView";
 import { DivToggle } from "./ui/DivToggle";
-import { DivContent } from "./ui/DivContent";
+import { Container } from "./ui/Container";
 
 export {
   ButtonComponent,
@@ -23,5 +23,5 @@ export {
   SectionToggle,
   InputView,
   DivToggle,
-  DivContent,
+  Container,
 };
