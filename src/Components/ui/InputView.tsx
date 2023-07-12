@@ -8,7 +8,7 @@ export const InputView: React.FC<Props> = ({ ThemeDark, value }) => {
     <div>
       <section className="">
         <input
-        disabled
+          disabled
           value={value}
           className={
             ThemeDark

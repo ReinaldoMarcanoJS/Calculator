@@ -1,13 +1,17 @@
-import {Dispatch,SetStateAction} from "react"
+import { Dispatch, SetStateAction } from "react";
 type Props = {
   ThemeDark: boolean;
   children: React.ReactNode;
-  setValue: Dispatch<SetStateAction<string>>,
-  value: string
+  setValue: Dispatch<SetStateAction<string>>;
+  value: string;
 };
 
-export const ButtonDelete: React.FC<Props> = ({ ThemeDark, children, value, setValue }) => {
-
+export const ButtonDelete: React.FC<Props> = ({
+  ThemeDark,
+  children,
+  value,
+  setValue,
+}) => {
   const deleteOne = () => {
     if (value.slice(-1) === " ") {
       setValue(value.substring(0, value.length - 3));
@@ -16,9 +20,9 @@ export const ButtonDelete: React.FC<Props> = ({ ThemeDark, children, value, setV
     } else {
       setValue(value.substring(0, value.length - 1));
     }
-  }
+  };
 
-    return (
+  return (
     <button
       type="button"
       onClick={deleteOne}

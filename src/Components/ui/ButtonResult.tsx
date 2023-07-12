@@ -1,23 +1,27 @@
-import {Dispatch, SetStateAction} from "react"
+import { Dispatch, SetStateAction } from "react";
 
 type Props = {
   ThemeDark: boolean;
   children: React.ReactNode;
-  setValue: Dispatch<SetStateAction<string>>
+  setValue: Dispatch<SetStateAction<string>>;
   value: string;
 };
 
-export const ButtonResult: React.FC<Props> = ({ ThemeDark, children, setValue, value }) => {
-
+export const ButtonResult: React.FC<Props> = ({
+  ThemeDark,
+  children,
+  setValue,
+  value,
+}) => {
   const calc = () => {
-   try {
-    if(value.length >= 5 && value.slice(-1) !== " "){
-      setValue(eval(value).toString())
+    try {
+      if (value.length >= 5 && value.slice(-1) !== " ") {
+        setValue(eval(value).toString());
+      }
+    } catch (error) {
+      setValue("ERROR");
     }
-   } catch (error) {
-    setValue("ERROR")
-   }
-  }
+  };
 
   return (
     <section className="w-full flex py-3">
