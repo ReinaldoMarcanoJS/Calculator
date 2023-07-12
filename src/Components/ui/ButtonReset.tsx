@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 type Props = {
   ThemeDark: boolean;
   children: React.ReactNode;
-  setValue : Dispatch<SetStateAction<number>>
+  setValue : Dispatch<SetStateAction<string>>
 };
 
 export const ButtonReset: React.FC<Props> = ({ ThemeDark, children,setValue }) => {
@@ -12,7 +12,7 @@ export const ButtonReset: React.FC<Props> = ({ ThemeDark, children,setValue }) =
 
     <button
       type="button"
-      onClick={() => setValue(0)}
+      onClick={() => setValue("")}
       className={
         ThemeDark
           ? "transition-colors duration-75 w-full h-16 md:h-15 border-b-4 border-b-dark-blue-key-shadow bg-dark-blue-key-background rounded-lg text-White text-md active:brightness-125"
