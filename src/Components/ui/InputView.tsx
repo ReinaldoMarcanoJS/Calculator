@@ -1,6 +1,6 @@
 type Props = {
   ThemeDark: boolean;
-  value: number;
+  value: string;
 };
 
 export const InputView: React.FC<Props> = ({ ThemeDark, value }) => {
@@ -8,7 +8,7 @@ export const InputView: React.FC<Props> = ({ ThemeDark, value }) => {
     <div>
       <section className="">
         <input
-          type="number"
+        disabled
           value={value}
           className={
             ThemeDark
